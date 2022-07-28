@@ -23,6 +23,11 @@ The Airstrip Survey program (see figure attached) is a user-friendly interface t
 The Airstrip Survey program works by collecting data from the input fields and stores it in memory as a list using the “Add” button.  This list can than be retrieved via two buttons, “Export to Excel” or the “Export to CSV” button. As explicitly shown by the button names, the retrieved list can be as an excel or a csv type format and is up to the user to choose what format they desire. The program than notifies the user with a pop-up message dialogue box if the export was successful.
 
 ![gui2](https://user-images.githubusercontent.com/73019564/181420806-488c818f-bfc9-4d6a-abd6-bc9f12b3a31a.jpg)
+![gui4](https://user-images.githubusercontent.com/73019564/181422978-da4f80c7-0670-4d22-90df-1c165d10c9ab.jpg)
+
+The exported data can be opened in excell as seen in the image above after multiple entries. A geoJSON file can be created from this to produce vector points for manipulation in a GIS by dropping it into the UI Tool created by Mapbox which can be accessed here (http://geojson.io/#map=8/-8.768/149.052)
+
+![gui5](https://user-images.githubusercontent.com/73019564/181424621-e0253e08-5ab6-4212-8ae3-b6b17c412d6f.jpg)
 
 # Motivation for program development
 The Airstrip Survey program was developed to target technical personnel in the aviation industry in Papua New Guinea. Airstrip surveyors in the past have been using sheets of printed paper to collect airstrip information and on these survey trips, they are exposed to the natural elements of nature. Sheets of paper would either get smudged, disintegrate under wet weather conditions or get blown away by wind if not bounded well. There was also, the tendency to accrue a clutter of survey papers when multiple airstrips where surveyed, which usually was the case. The old process for these airstrip surveyors was that after each survey trip, these survey sheets would then be transferred manually into excel or csv to build a database of the airstrips in the country and to use that to plot on map.
@@ -31,9 +36,12 @@ The benefits of the Airstrip Survey program will improve the performance of surv
 
 ### *Program development process*
 Earlier version of the program was based on having a list view field where with each text input in the text fields this data would then be displayed. However, after some consideration that design had to be changed mostly because:
+
 •	It was merely displaying the data twice
 •	Taking up space in the program window
+
 The current design being minimalist was preferred because:
+
 •	Provided a clear prompt to the user to, directing attention to start the data entry process
 
 Throughout the design and testing phase, it was noticed that the text fields needed to be cleared after every entry as these were being cleared manually, placing the program into jeopardy of being inefficient. To solve this, a clear function was then included to handle this.
@@ -48,7 +56,7 @@ The flow chart below shows just how the program works.
 Getting the export functions to actually export as excel and csv file formats was a plus for the program. These functions where essentially what the programs end result or output was going to be. Having that functionality completes the program as otherwise the program development would have to be abandoned.
 
 ### *Challenges*
-Standout challenges where choosing the right library packages and the dependencies needed to build the program. Also, learning to write the program outside of the course materials was quite challenging as well.  To over come these, materials online and tutorials helped grasp the new concepts.
+Standout challenges where choosing the right library packages and the dependencies needed to build the program.
 
 ### *Future Developments*
 The Airstrip program is a desktop GUI, its envisioned that a mobile platform can be developed to expand its capabilities. Possible library packages is Kivy and there’s documentation out there online which can be used to guide the development of this mobile application. It will maintain the main purpose of collecting data and writing them to the specified file formats however there will be the inclusion of viewing that online on a map. Having that versatility would add a tremendous upgrade to the Airstrip Survey program and would be the preferred software.
