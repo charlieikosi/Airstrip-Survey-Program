@@ -1,4 +1,4 @@
-# Intent of Program Development Project
+# Intent
 
 ### *Overview*
 Papua New Guinea, a small Island nation situated north of Australia and borders Indonesia has so many small airports that serve much of the population in remote parts of the country. These small aerodromes, termed airstrips have surfaces that are either gravel or grass covered and are usually built into the side of mountains or in the middle of a rainforest. Survey teams that go out to these places survey them using sheets of paper in which the surveyor fills out manually by hand during the airstrip inspection. The parameters of inspection are:
