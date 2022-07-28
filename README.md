@@ -16,5 +16,5 @@ This project endeavours to eliminate paper entry of survey data by creating a gr
 
 # The Program
 The Airstrip Survey program (see figure attached) is a user-friendly interface that shows 8 variables which guides the user to input airstrip survey data. The program also has three buttons placed at the bottom which are “Add”, “Export to Excel” and “Export to CSV”.  These buttons allow the user to retrieve the data from the program or add to it.
-![gui1](https://user-images.githubusercontent.com/73019564/181419522-4483e995-4bf1-4e93-afcb-c00ba35f4ea0.jpg){width=70%}
+![gui1](https://user-images.githubusercontent.com/73019564/181419522-4483e995-4bf1-4e93-afcb-c00ba35f4ea0.jpg)
 
