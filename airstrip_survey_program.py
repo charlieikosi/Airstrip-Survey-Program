@@ -6,13 +6,14 @@
 
 import tkinter as tk
 from tkinter import StringVar
+from tkinter import Tk, filedialog
 from tkinter import messagebox
 import pandas as pd
 from pathlib import Path
 from tkinter import *
 import os
 import sys
-#import openpyxl
+import openpyxl
 import csv
 
 
@@ -127,11 +128,26 @@ def clear_inputs():
     longitude_entry.delete(0, tk.END)
     district_entry.delete(0, tk.END)
     striptype_entry.delete(0, tk.END)
- 
+    
+# Prompt - Save path window   
+def path_to_save():
+    """Function that creates dialogue popup window to select file path to save
+    file outputs on system"""
+    root = Tk() # pointing root to Tk() to use it as Tk() in program.
+    root.withdraw() # Hides small tkinter window.
+    ''
+    root.attributes('-topmost', True) # Opened windows will be active. above all windows despite of selection.
+    ''
+    open_file = filedialog.askdirectory() # Returns opened path as str
+    return open_file
+    
         
 def exportexcel():
-    """Create a Pandas excel writer using XLSXwriter  as the negine"""
-    excelwriter = pd.ExcelWriter(r"G:/UC/Course/COSC480/PROGRAMS/cosc480/aiports.xlxs")
+    """Create a Pandas excel writer using XLSXwriter  as the engine"""
+    file_directory = path_to_save()
+    file_output = "/airports.xlsx"
+    files_path_xl = file_directory + file_output
+    excelwriter = pd.ExcelWriter(files_path_xl)
     df = make_dataframe()
     df.to_excel(excelwriter,sheet_name="Analysis")
     excelwriter.save()
@@ -142,8 +158,11 @@ def exportexcel():
     
 def exportcsv():
     """Function that creates a csv file"""
+    file_directory = path_to_save()
+    file_output = "/airports.csv"
+    files_path_csv = file_directory + file_output    
     airports = make_dataframe()
-    airports.to_csv("G:\\UC\\Course\\COSC480\\PROGRAMS\\cosc480\\aiports.csv")
+    airports.to_csv(files_path_csv)
 
     messagebox.showinfo("CSV Export","Export completed")
     
@@ -152,6 +171,7 @@ def exportcsv():
 window = tk.Tk() 
 window.title("Airstrip Survey")
 window.geometry("450x450") # sets the dimensions of the GUI window
+window.resizable(0,0) # fixes window frame to set geometry
 
 
 
